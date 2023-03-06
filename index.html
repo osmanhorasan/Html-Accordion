@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+
+        }
+
+        .container {
+            box-shadow: 0px 0px 5px #ccc;
+            border-radius: 2px;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .openClose {
+            line-height: 30px;
+            text-indent: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .accordionItems {
+            display: flex;
+            flex-direction: column;
+            text-indent: 10px;
+            height: 0;
+            gap: 5px;
+        }
+
+        .accordionItems label {
+            position: relative;
+            line-height: 30px;
+            display: flex;
+            text-indent: 30px;
+            position: relative;
+            align-items: center;
+        }
+
+        .accordionItems label input {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordionItems {
+            background-color: #f2f2f2;
+            line-height: 30px;
+        }
+
+        .openCloseChecked {
+            display: none;
+        }
+
+        .openCloseChecked:checked+.accordionItems {
+            height: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion"><label for="category" class="openClose">Kategori</label><input type="checkbox"
+                name="category" id="category" class="openCloseChecked">
+            <div class="accordionItems"><label for="telefon">Cep Telefonu<input type="checkbox" name="telefon"
+                        id="telefon"></label><label for="bilgisayar">Bilgisayar<input type="checkbox" name="bilgisayar"
+                        id="bilgisayar"></label><label for="tv">Televizyon<input type="checkbox" name="tv"
+                        id="tv"></label></div>
+        </div>
+        <div class="accordion"><label for="price" class="openClose">Fiyat</label><input type="checkbox" name="price"
+                id="price" class="openCloseChecked">
+            <div class="accordionItems"><label for="0-500">0-500 TL<input type="checkbox" name="0-500"
+                        id="0-500"></label><label for="500-1000">500-1000 TL<input type="checkbox" name="500-1000"
+                        id="500-1000"></label><label for="1000-2000">1000-2000 TL<input type="checkbox" name="1000-2000"
+                        id="1000-2000"></label><label for="2000-5000">2000-5000 TL<input type="checkbox"
+                        name="2000-5000" id="2000-5000"></label><label for="5000">5000 TL ve üzeri<input type="checkbox"
+                        name="5000" id="5000"></label></div>
+        </div>
+        <div class="accordion"><label for="brand" class="openClose">Marka</label><input type="checkbox" name="brand"
+                id="brand" class="openCloseChecked">
+            <div class="accordionItems"><label for="samsung">Samsung<input type="checkbox" name="samsung"
+                        id="samsung"></label><label for="apple">Apple<input type="checkbox" name="apple"
+                        id="apple"></label><label for="huawei">Huawei<input type="checkbox" name="huawei"
+                        id="huawei"></label><label for="xiaomi">Xiaomi<input type="checkbox" name="xiaomi"
+                        id="xiaomi"></label><label for="asus">Asus<input type="checkbox" name="asus"
+                        id="asus"></label><label for="lenovo">Lenovo<input type="checkbox" name="lenovo"
+                        id="lenovo"></label><label for="lg">LG<input type="checkbox" name="lg" id="lg"></label><label
+                    for="sony">Sony<input type="checkbox" name="sony" id="sony"></label></div>
+        </div>
+        <div class="accordion"><label for="screenSize" class="openClose">Ekran Boyutu</label><input type="checkbox"
+                name="screenSize" id="screenSize" class="openCloseChecked">
+            <div class="accordionItems"><label for="4in-alti">4 inç ve altı<input type="checkbox" name="4in-alti"
+                        id="4in-alti"></label><label for="4-5in">4-5 inç<input type="checkbox" name="4-5in"
+                        id="4-5in"></label><label for="5-6in">5-6 inç<input type="checkbox" name="5-6in"
+                        id="5-6in"></label><label for="6in-ustu">6 inç ve üstü<input type="checkbox" name="6in-ustu"
+                        id="6in-ustu"></label></div>
+        </div>
+        <div class="accordion"><label for="color" class="openClose">Renk</label><input type="checkbox" name="color"
+                id="color" class="openCloseChecked">
+            <div class="accordionItems"><label for="siyah">Siyah<input type="checkbox" name="siyah"
+                        id="siyah"></label><label for="beyaz">Beyaz<input type="checkbox" name="beyaz"
+                        id="beyaz"></label><label for="gri">Gri<input type="checkbox" name="gri" id="gri"></label><label
+                    for="altin">Altın<input type="checkbox" name="altin" id="altin"></label><label
+                    for="gumus">Gümüş<input type="checkbox" name="gumus" id="gumus"></label></div>
+        </div>
+    </div>
+</body>
+
+</html>
